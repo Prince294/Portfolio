@@ -1,0 +1,50 @@
+@media only screen and (max-width: 750px) {
+  :-webkit-scrollbar {
+    background-color: red;
+  }
+  body {
+    overflow-x: hidden;
+  }
+  .dropdown {
+    display: block;
+    right: calc(1.5rem + 3.5rem);
+  }
+  .navbar {
+    background-color: rgba(0, 0, 0, 0);
+  }
+
+  .navbar .list_item {
+    display: none;
+  }
+
+  .burger {
+    visibility: visible;
+  }
+
+  .list_item_dropdown {
+    display: flex;
+    padding-top: 5rem;
+    transform: translateY(calc(-50vh - 5rem));
+    transition: all 1s ease-in-out;
+  }
+
+  #check:checked ~ .list_item_dropdown {
+    transform: translateY(0vh);
+  }
+
+  .about .container {
+    flex-direction: column;
+  }
+}
+
+@media only screen and (max-width: 1250px) {
+  .projects .container .card {
+    width: max(24vw, 26vh);
+  }
+  .content .cardHeader {
+    font-size: max(3vw, 3.5vh);
+  }
+  .container .more {
+    font-size: max(1.3vw, 1.6vh);
+  }
+}

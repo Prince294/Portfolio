@@ -1,0 +1,131 @@
+.projects {
+  position: relative;
+  width: 100vw;
+  min-height: 70vh;
+  background: white;
+  margin-top: 105vh;
+  color: var(--projectColor);
+  padding: 20vh 0 5vh 0;
+}
+
+.projects .heading {
+  position: absolute;
+  top: 8vh;
+  left: 50%;
+  font-size: max(3.5vw, 4.8vh);
+  font-family: "Lobster", cursive;
+  width: auto;
+  transform: translate(-50%, 0);
+}
+
+.projects .heading::after {
+  content: "";
+  position: absolute;
+  width: 40%;
+  display: block;
+  height: max(0.45vw, 1vh);
+  background-color: var(--projectColor);
+  border-radius: 20px;
+  bottom: 0;
+  left: 100%;
+  transform: translate(-80%, 0);
+}
+
+.projects .container {
+  width: 100vw;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.projects .container .card {
+  position: relative;
+  width: 20vw;
+  overflow: hidden;
+  background: radial-gradient(at -50% 0%, rgb(80, 80, 0), black);
+  box-shadow: 2px 2px 8px 0px black;
+  color: red;
+  transition: all 0.2s ease-in;
+  margin: 20px 20px;
+}
+
+.projects .container .card:hover {
+  box-shadow: 4px 4px 16px 2px black;
+}
+
+.container .card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--navColor);
+  clip-path: circle(150px at 80% 10%);
+  transition: 0.3s ease-in-out;
+}
+
+.projects .container .card:hover::before {
+  clip-path: circle(300px at 80% -45%);
+  opacity: 0.55;
+}
+
+.card .flex {
+  position: relative;
+  transform: translateY(45%);
+  transition: all 0.2s ease-in;
+}
+
+.projects .container .card:hover .flex {
+  transform: translateY(10%);
+}
+
+.card .img {
+  position: relative;
+  text-align: center;
+  font-size: max(5vw, 8vh);
+  transition: all 0.25s ease-in;
+}
+
+.card .content {
+  position: relative;
+  transform: translateY(200%);
+  transition: all 0.3s ease-in;
+}
+.card:hover .content {
+  transform: translateY(0%);
+}
+
+.content .cardHeader {
+  font-size: 2.1rem;
+  text-align: center;
+}
+
+.content .desc {
+  text-align: center;
+  font-size: 2.5vw;
+  margin: 15px 5px;
+  padding: 0 10px;
+}
+
+.container .more {
+  text-align: center;
+  font-size: 1.3vw;
+  margin: 2vh 0 6.5vh 0;
+}
+
+.container .more a {
+  padding: 5px 10px;
+  background-color: red;
+  text-decoration: none;
+  color: white;
+  font-family: "Sniglet", cursive;
+  transition: all 0.2s ease-in;
+  box-shadow: 4px 4px 12px 0px red;
+}
+
+.container .more:hover a {
+  padding: 5px 16px;
+  box-shadow: 3px 4px 16px 4px red;
+}

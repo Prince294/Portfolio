@@ -1,0 +1,139 @@
+.aboutbtn {
+  width: 9vh;
+  height: 9vh;
+  flex-direction: column;
+  background: var(--navColor);
+  position: absolute;
+  z-index: 1;
+  border-radius: 50%;
+  cursor: pointer;
+  top: 105vh;
+  left: 50vw;
+  transform: translate(-50%, -50%);
+  transition: all 0.3s ease;
+}
+.aboutbtn:hover {
+  background: var(--navColor);
+  opacity: 0.9;
+}
+
+.aboutbtn::before,
+.aboutbtn::after {
+  content: "";
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  border: 3px solid black;
+  border-top: transparent;
+  border-left: transparent;
+  left: 50%;
+  top: 15%;
+  transform: translateX(-50%) rotate(45deg);
+  animation: anim 1.2s ease-in-out infinite 0.1s;
+}
+
+.aboutbtn::after {
+  top: 25%;
+  animation: anim 1.2s ease-in-out infinite;
+}
+
+@keyframes anim {
+  0% {
+    opacity: 0;
+  }
+  30% {
+    opacity: 1;
+  }
+  60% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    top: 50%;
+  }
+}
+.about {
+  position: relative;
+  background: rgba(0, 0, 0, 0.8) url("../img/bg2.jpg");
+  background-size: cover;
+  background-blend-mode: darken;
+  /* background-color: white; */
+  color: var(--aboutColor);
+  top: 105vh;
+  height: 110vh;
+  width: 100vw;
+  overflow: hidden;
+}
+
+.about .heading {
+  margin: 13.5vh 0;
+  position: absolute;
+  left: 50%;
+  font-size: max(3.5vw, 5.8vh);
+  font-family: "Lobster", cursive;
+  width: auto;
+  transform: translate(-50%, 0);
+}
+.about .heading::after {
+  content: "";
+  position: absolute;
+  width: 50%;
+  display: block;
+  height: max(0.45vw, 1vh);
+  background-color: var(--aboutColor);
+  border-radius: 20px;
+  bottom: 0;
+  left: 90%;
+  transform: translate(-80%, 0);
+}
+
+.about .container {
+  width: 90vw;
+  height: 60vh;
+  position: relative;
+  left: 50%;
+  transform: translate(-50%, 0);
+  margin-top: 28vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+}
+
+.about .container .image {
+  width: 80%;
+  height: 100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about .container .image .img {
+  width: max(25vh, 19vw);
+  height: max(25vh, 19vw);
+  background-image: url("/img/profile.jpg");
+  background-size: cover;
+  border-radius: 50%;
+}
+.about .container .content {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  font-family: "Cinzel", "Ubuntu", sans-serif;
+}
+
+.content h3 {
+  position: relative;
+  font-size: max(2.5vw, 5vh);
+  margin-bottom: 10px;
+}
+.content p {
+  font-family: "Sniglet", cursive;
+  font-size: max(1.2vw, 2vh);
+  margin: 3px;
+}

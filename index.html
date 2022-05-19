@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="icon" href="img/link_logo.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- JS all libraries -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- Typing JS -->
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+
+    <!-- Logo CSS  -->
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+      crossorigin="anonymous"
+    />
+
+    <!-- MyFiles CSS/JS -->
+    <link rel="stylesheet" href="css/styleHome.css" />
+    <link rel="stylesheet" href="css/styleAbout.css" />
+    <link rel="stylesheet" href="css/styleProject.css" />
+    <link rel="stylesheet" href="css/styleSkills.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+
+    <title>Portfolio</title>
+  </head>
+
+  <body>
+    <nav class="navbar">
+      <ul class="list_item">
+        <li class="lis"><a href="#homeLink">Home</a></li>
+        <li class="lis"><a href="#about">About</a></li>
+        <li class="lis"><a href="#projects">Projects</a></li>
+        <li class="lis"><a href="#skills">Skills</a></li>
+        <li class="lis"><a href="#contacts">Contacts</a></li>
+      </ul>
+
+      <input type="checkbox" id="check" style="display: none" />
+      <label class="dropdown" for="check" onclick="dropDown()">
+        <svg height="60" width="60" class="dropdown-border">
+          <circle cx="30" cy="30" r="25" class="track" />
+          <circle cx="30" cy="30" r="25" class="progress" />
+        </svg>
+        <div class="burger">
+          <div class="line1"></div>
+          <div class="line2"></div>
+          <div class="line3"></div>
+        </div>
+      </label>
+      <ul class="list_item_dropdown">
+        <li><a href="#homeLink">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#contacts">Contacts</a></li>
+      </ul>
+    </nav>
+    <div id="homeLink"></div>
+    <div class="home">
+      <div class="container">
+        <h1>Hello!</h1>
+        <span class="intro">I'm Prince Kumar</span>
+        <div class="typed">And I'm a <span class="typing"></span></div>
+      </div>
+    </div>
+
+    <!-- custom button for scrolling to about -->
+    <div class="aboutbtn" onclick="scrollAbout()"></div>
+    <!-- about container -->
+    <div class="about" id="about">
+      <h3 class="heading">About me</h3>
+      <div class="container">
+        <div class="image">
+          <div class="img"></div>
+        </div>
+        <div class="content">
+          <h3>I'm Prince Kumar</h3>
+          <p class="stmt1">
+            Pursuing B.Tech from <b>Computer Science and Engineering</b> at
+            <b>ABES Institute Of Technology</b> , Ghaziabad.
+          </p>
+          <p class="stmt2">
+            Currently I'm expertise in <b>ReactJs</b>, advance C,<b>
+              HTML5, CSS</b
+            >, PHP, <b>Django</b>, Python, MySql.
+          </p>
+          <p>
+            I can make so<b> many things</b> simply by
+            <b>leveraging code</b> that other people have made for me to use.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- projects container -->
+    <div class="projects" id="projects">
+      <h3 class="heading">My Projects</h3>
+      <div class="container">
+        <div class="card1 card">
+          <div class="flex">
+            <div class="img">
+              <i class="far fa-newspaper news"></i>
+            </div>
+            <div class="content">
+              <p class="cardHeader">News WebApp</p>
+              <div class="desc">
+                <p>
+                  This is a News App where you can see the latest news in all
+                  category using ReactJs.
+                </p>
+              </div>
+              <div class="more">
+                <a href="https://github.com/Prince294/News-WebApp-ReactJs"
+                  >Know More</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card2 card">
+          <div class="flex">
+            <div class="img">
+              <i class="far fa-board"></i>
+            </div>
+            <div class="content">
+              <p class="cardHeader">Tower of Hanoi</p>
+              <div class="desc">
+                <p>
+                  Automatic Tower of Hanoi Solver using C Programming Language.
+                </p>
+              </div>
+              <div class="more">
+                <a
+                  href="https://github.com/Prince294/C-Projects/tree/main/Tower%20Of%20Hanoi"
+                  >Know More</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card3 card">
+          <div class="flex">
+            <div class="img">
+              <i class="far fa-clipboard"></i>
+            </div>
+            <div class="content">
+              <p class="cardHeader">Attendence System</p>
+              <div class="desc">
+                <p>
+                  FaceRecognition Based Attendence System using python language.
+                </p>
+              </div>
+              <div class="more">
+                <a
+                  href="https://github.com/Prince294/Smart-India-Hackathon--Team-Reflex"
+                  >Know More</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer>
+      <div class="text">
+        Created by<span> Prince Kumar</span> | &copy;2020 All Right Reserved
+      </div>
+    </footer>
+
+    <script
+      src="https://kit.fontawesome.com/a8d6994230.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>

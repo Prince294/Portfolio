@@ -1,0 +1,251 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Sniglet&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+:root {
+  --navColor: yellow;
+  --homeColor: white;
+  --aboutColor: white;
+  --projectColor: black;
+  --skillColor: white;
+  --navBeforeColor: yellow;
+}
+
+::-webkit-scrollbar {
+  width: 0px;
+}
+
+.navbar {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--navColor);
+  position: fixed;
+  transition: all 0.6s ease;
+  z-index: 1000;
+}
+
+.navScroll {
+  background-color: rgba(0, 0, 0, 0.35);
+}
+
+.navbar .list_item {
+  margin: 1.8em;
+  list-style: none;
+  display: flex;
+}
+
+.navbar .list_item .lis {
+  position: relative;
+  margin: 0 1.5em;
+  cursor: pointer;
+  font-family: "Ubuntu", sans-serif;
+}
+
+.navbar .list_item .lis a {
+  text-decoration: none;
+  color: var(--navColor);
+  transition: color 0.8s ease;
+}
+
+.navbar .list_item .lis:hover {
+  font-weight: 600;
+}
+.navbar .list_item .lis::after {
+  content: "";
+  position: absolute;
+  height: 0.1em;
+  bottom: -0.3em;
+  width: 0;
+  margin: auto;
+  left: 0;
+  right: 0;
+  background-color: var(--navBeforeColor);
+  transition: width 0.3s ease-in-out;
+}
+
+.navbar .list_item .lis:hover::after {
+  width: 98%;
+}
+
+.list_item_dropdown {
+  display: none;
+  position: absolute;
+  width: 100vw;
+  min-height: 50vh;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  z-index: -10;
+}
+
+.list_item_dropdown li {
+  list-style: none;
+  font-family: "Roboto", sans-serif;
+  margin: 1em 0;
+  padding: 0.5em 0;
+  width: 65%;
+  font-size: 1.1rem;
+  background-color: var(--navColor);
+  text-align: center;
+  border-radius: 3em;
+  cursor: pointer;
+  transition: all 0.3s ease-in;
+}
+
+.list_item_dropdown li a {
+  text-decoration: none;
+  color: black;
+}
+
+.dropdown {
+  background-color: red;
+  position: absolute;
+  height: 0;
+  width: 0;
+  right: 14em;
+  top: 0.5em;
+  cursor: pointer;
+  z-index: 4;
+}
+
+.dropdown-border {
+  position: relative;
+}
+.dropdown .track {
+  fill: none;
+}
+.dropdown .progress {
+  fill: rgba(0, 0, 0, 0.1);
+  stroke: var(--navColor);
+  stroke-width: 2.5;
+  transform: rotate(-90deg);
+  transform-origin: center;
+  stroke-dashoffset: 0;
+  transition: stroke 0.8s ease;
+}
+
+.burger {
+  visibility: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  cursor: pointer;
+  position: relative;
+  bottom: 3.6rem;
+  left: 0.4rem;
+}
+
+.burger .line1 {
+  height: 0.2rem;
+  width: 60%;
+  background-color: white;
+  border-radius: 2rem;
+  transition: all 0.2s ease-in;
+}
+.burger .line2 {
+  height: 0.2rem;
+  width: 30%;
+  background-color: white;
+  border-radius: 2rem;
+  margin: 0.25rem 0;
+  transition: width 0.2s ease-in;
+}
+.burger .line3 {
+  height: 0.2rem;
+  width: 60%;
+  background-color: white;
+  border-radius: 2rem;
+  transition: all 0.2s ease-in;
+}
+
+#check:checked + .dropdown .line1 {
+  transform: rotate(45deg) translate(0.3rem, 0.3rem);
+  width: 2rem;
+  height: 0.2rem;
+  background-color: white;
+}
+#check:checked + .dropdown .line2 {
+  visibility: hidden;
+}
+#check:checked + .dropdown .line3 {
+  transform: rotate(-45deg) translate(0.3rem, -0.3rem);
+  width: 2rem;
+  height: 0.2rem;
+  background-color: white;
+}
+
+#check:hover + .dropdown .line1,
+#check:hover + .dropdown .line3 {
+  background-color: var(--navColor);
+}
+#check:hover + .dropdown .line2 {
+  width: 40%;
+  background-color: var(--navColor);
+}
+
+#check:checked:hover + .dropdown .line1,
+#check:checked:hover + .dropdown .line3 {
+  background-color: var(--navColor);
+}
+
+.home {
+  background: rgba(0, 0, 0, 0.65) url("../img/bg3.jpg");
+  background-size: cover;
+  background-blend-mode: darken;
+  height: 105vh;
+  width: 100vw;
+  position: fixed;
+  color: var(--homeColor);
+  top: 0;
+  left: 0;
+}
+
+.home .container {
+  position: relative;
+  max-width: 80vw;
+  min-height: 40vh;
+  margin: auto;
+  top: 50vh;
+  transform: translateY(-50%);
+  font-family: "Ubuntu", sans-serif;
+}
+
+.home .container h1 {
+  width: auto;
+  position: relative;
+  font-size: 3rem;
+}
+
+.home .container .intro {
+  margin-top: 0px;
+  font-size: 3.8rem;
+}
+.home .container .typed {
+  margin-top: 0.3rem;
+  font-size: 1.8rem;
+}
+
+.home .container .typed .typing {
+  font-size: 2.8rem;
+  color: var(--navColor);
+}
